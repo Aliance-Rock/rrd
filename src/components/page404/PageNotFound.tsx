@@ -1,20 +1,13 @@
 import { FC } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const PageNotFound: FC = () => {
-	const navigate = useNavigate()
-
 	return (
-		<div>
+		<div className='app'>
 			<div>Страница не найдена</div>
-			<button
-				onClick={() => {
-					navigate('/')
-				}}
-			>
-				{' '}
-				Вернуться
-			</button>
+			<button>
+				<Link to='/'>Вернуться на домашнюю страницу</Link>
+				</button>
 		</div>
 	)
 }
